@@ -1,0 +1,24 @@
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+
+<h1>Search Results for '{{ search_query }}'</h1>
+
+<ul>
+    {% for result in results %}
+        <li>
+            <strong>Name:</strong> {{ result.name }}<br>
+            <strong>Phone Number:</strong> {{ result.phone_number }}<br>
+            <strong>Spam Likelihood:</strong> {{ result.spam_likelihood }}<br>
+            <!-- Include other relevant fields -->
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
